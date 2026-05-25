@@ -146,11 +146,16 @@ def init_db() -> None:
             "payment_account_number": "TEXT",
             "payment_instructions": "TEXT",
             "updated_at": "TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP",
-            "created_at": "TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP",  # add this if needed
+            "created_at": "TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP",
         }.items():
-            if "created_at" not in existing_company_columns:
-                cursor.execute("ALTER TABLE companies ADD COLUMN created_at TEXT")
-                cursor.execute("UPDATE companies SET created_at = CURRENT_TIMESTAMP WHERE created_at IS NULL")
+            if name in existing_company_columns:
+                continue
+
+            if name in {"created_at", "updated_at"}:
+                cursor.execute(f"ALTER TABLE companies ADD COLUMN {name} TEXT")
+                cursor.execute(f"UPDATE companies SET {name} = CURRENT_TIMESTAMP WHERE {name} IS NULL")
+            else:
+                cursor.execute(f"ALTER TABLE companies ADD COLUMN {name} {definition}")
 
     from database_ap_ar import init_ap_ar_db
     init_ap_ar_db()
