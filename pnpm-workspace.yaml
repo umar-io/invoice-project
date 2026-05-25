@@ -1,3 +1,4 @@
 packages:
+  - "landingpage"
   - "apps/*"
   - "packages/*"

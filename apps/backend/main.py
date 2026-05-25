@@ -64,7 +64,7 @@ optional_bearer_scheme = HTTPBearer(auto_error=False)
 
 default_origins = [
     "http://localhost:5173",
-    "https://approveet.vercel.app",
+    "https://approveet-app.vercel.app",
     "https://invoice-project-t4yz.onrender.com/"
 ]
 env_origins = [

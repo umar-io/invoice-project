@@ -113,8 +113,8 @@ export function Hero() {
           another spreadsheet maze.
         </p>
         <div className="hero-actions">
-          <Button href="https://approveet.vercel.app">Start for free →</Button>
-          <Button href="https://approveet.vercel.app" variant="ghost">
+          <Button href="https://app.approveet.vercel.app">Start for free →</Button>
+          <Button href="https://app.approveet.vercel.app" variant="ghost">
             See a demo
           </Button>
         </div>
