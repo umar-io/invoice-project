@@ -64,8 +64,8 @@ optional_bearer_scheme = HTTPBearer(auto_error=False)
 
 default_origins = [
     "http://localhost:5173",
-    "https://ai-invoicer-demo.vercel.app",
-    "https://invoice-ai-workflow.onrender.com",
+    "https://approveet.vercel.app",
+    "https://invoice-project-t4yz.onrender.com/"
 ]
 env_origins = [
     origin.strip().rstrip("/")
