@@ -36,6 +36,7 @@ skills-lock.json
 *.njsproj
 *.sln
 *.sw?
+*.next
 
 # Optional backups of previous standalone Git repositories.
 .git-archives/
