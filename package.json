@@ -1,0 +1,19 @@
+{
+  "name": "invoice-ai-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "dev:frontend": "pnpm --filter @invoice-ai/frontend dev",
+    "dev:backend": "pnpm --filter @invoice-ai/backend dev",
+    "build": "pnpm --filter @invoice-ai/frontend build",
+    "lint": "pnpm --filter @invoice-ai/frontend lint",
+    "preview": "pnpm --filter @invoice-ai/frontend preview",
+    "seed:backend": "pnpm --filter @invoice-ai/backend seed",
+    "smoke:backend": "pnpm --filter @invoice-ai/backend smoke"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2"
+  }
+}

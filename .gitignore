@@ -1,0 +1,45 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+__pycache__/
+*.pyc
+app.db
+
+# JavaScript
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+skills-lock.json
+
+# Editors and OS files
+.agents/
+.claude/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Optional backups of previous standalone Git repositories.
+.git-archives/
+
+# Old standalone app folders. The monorepo copies live under apps/.
+invoice-ai-frontend/
+invoice-ai-backend/

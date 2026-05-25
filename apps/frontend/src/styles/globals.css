@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+  --font-body: 'Geist', 'Inter', system-ui, sans-serif;
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  @apply bg-zinc-900 text-white dark:bg-white dark:text-zinc-900;
+}
+
+.font-mono    { font-family: var(--font-mono); font-feature-settings: 'zero', 'ss01'; }
+.font-body    { font-family: var(--font-body); }
+.tnum         { font-variant-numeric: tabular-nums; }
+
+/* Entrance animation */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+  animation: fade-in-up 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scrollbar refinement */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { @apply bg-transparent; }
+::-webkit-scrollbar-thumb { @apply bg-zinc-200 rounded-full dark:bg-zinc-800; }
+::-webkit-scrollbar-thumb:hover { @apply bg-zinc-300 dark:bg-zinc-700; }
+
+/* Status Pill - Refined SaaS Version */
+.status-pill {
+  @apply inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium border transition-colors;
+}
+
+.status-pill--pending { 
+  @apply bg-amber-50 text-amber-700 border-amber-200/50 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800/50; 
+}
+.status-pill--review { 
+  @apply bg-indigo-50 text-indigo-700 border-indigo-200/50 dark:bg-indigo-900/20 dark:text-indigo-400 dark:border-indigo-800/50; 
+}
+.status-pill--approved { 
+  @apply bg-emerald-50 text-emerald-700 border-emerald-200/50 dark:bg-emerald-900/20 dark:text-emerald-400 dark:border-emerald-800/50; 
+}
+.status-pill--rejected { 
+  @apply bg-rose-50 text-rose-700 border-rose-200/50 dark:bg-rose-900/20 dark:text-rose-400 dark:border-rose-800/50; 
+}
+
+/* Utility: Glass border */
+.border-glass {
+  @apply border border-zinc-200/60 dark:border-zinc-800/60;
+}
+
+/* Utility: Section heading */
+.eyebrow {
+  @apply text-[11px] font-semibold uppercase tracking-wider text-muted-foreground;
+}
+
+h1, h2, h3, h4 {
+  @apply tracking-tight font-semibold text-foreground;
+}
+
+

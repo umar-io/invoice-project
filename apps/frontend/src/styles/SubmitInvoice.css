@@ -1,0 +1,191 @@
+.submit-invoice {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  margin-bottom: 32px;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+}
+
+.back-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+}
+
+.back-link:focus {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+.submit-invoice h1 {
+  margin: 0 0 32px;
+}
+
+.error-banner {
+  padding: 12px 16px;
+  border-radius: 6px;
+  background: rgba(215, 58, 73, 0.1);
+  border: 1px solid var(--status-rejected);
+  color: var(--status-rejected);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.invoice-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: block;
+}
+
+.required {
+  color: var(--status-rejected);
+}
+
+.form-hint {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.form-textarea {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  resize: none;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--text-primary);
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  flex: 1;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--text-secondary);
+}
+
+.btn-primary:focus {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  flex: 1;
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+.btn-secondary:focus {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+.btn-large {
+  padding: 12px 16px;
+}
+
+@media (max-width: 640px) {
+  .submit-invoice {
+    margin: 0;
+  }
+
+  .back-link {
+    margin-bottom: 24px;
+  }
+
+  .submit-invoice h1 {
+    font-size: 24px;
+    margin: 0 0 24px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    flex: 1;
+    width: 100%;
+  }
+}

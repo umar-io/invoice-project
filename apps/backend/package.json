@@ -1,0 +1,10 @@
+{
+  "name": "@invoice-ai/backend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "venv\\Scripts\\python.exe -m uvicorn main:app --reload --port 8000",
+    "seed": "venv\\Scripts\\python.exe schema.py && venv\\Scripts\\python.exe seed.py",
+    "smoke": "venv\\Scripts\\python.exe test.py"
+  }
+}
