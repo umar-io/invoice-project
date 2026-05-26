@@ -256,7 +256,7 @@ a {
   overflow: hidden;
 }
 
-.how-card + .how-card {
+.how-card+.how-card {
   border-left: 1px solid var(--color-border);
 }
 
@@ -375,7 +375,7 @@ a {
   text-align: center;
 }
 
-.integration-item + .integration-item {
+.integration-item+.integration-item {
   border-left: 1px solid var(--color-border);
 }
 
@@ -393,7 +393,7 @@ a {
   padding: 38px 34px;
 }
 
-.pricing-card + .pricing-card {
+.pricing-card+.pricing-card {
   border-left: 1px solid var(--color-border);
 }
 
@@ -499,4 +499,92 @@ a {
   color: var(--color-muted);
   font-size: 12px;
   line-height: 1;
+}
+
+/* Rings */
+.orbit-ring {
+  fill: none;
+  stroke: var(--color-hub-border);
+  stroke-width: 1;
+}
+
+.orbit-ring.inner {
+  stroke-dasharray: 4 6;
+}
+
+.orbit-ring.outer {
+  stroke-dasharray: 4 8;
+}
+
+/* Center */
+.hub-box {
+  fill: var(--color-hub-box);
+  stroke: var(--color-hub-border);
+  stroke-width: 1.5;
+}
+
+.hub-letter {
+  fill: var(--color-cream);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.hub-label {
+  fill: var(--color-hub-label);
+  font-size: 7px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+/* Orbit items */
+.orbit-box {
+  fill: var(--color-hub-box);
+  stroke: var(--color-hub-border);
+}
+
+.orbit-label {
+  fill: var(--color-hub-label);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+/* 🔥 Animation */
+.orbit-inner {
+  transform-origin: 160px 160px;
+  animation: spin 20s linear infinite;
+}
+
+.orbit-outer {
+  transform-origin: 160px 160px;
+  /* Outer ring moves slower and in reverse for a "clockwork" feel */
+  animation: spin 35s linear infinite reverse;
+}
+
+.orbit-item {
+  transform-origin: center;
+  animation: counterSpin 20s linear infinite;
+}
+
+/* Hub center slow rotation */
+.hub-center-rotate {
+  transform-origin: 160px 160px;
+  animation: spin 60s linear infinite;
+}
+
+.orbit-outer .orbit-item {
+  animation-duration: 35s;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterSpin {
+  to {
+    transform: rotate(-360deg);
+  }
 }

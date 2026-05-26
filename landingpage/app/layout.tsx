@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Playfair_Display, Nunito_Sans } from "next/font/google";
-import "./globals.css";
+import "./globals.css"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
