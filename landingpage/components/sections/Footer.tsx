@@ -4,8 +4,8 @@ type FooterLink = {
 };
 
 const footerLinks: FooterLink[] = [
-  { label: "GitHub", href: "https://github.com" },
-  { label: "Docs", href: "https://ai-invoicer-demo.vercel.app" },
+  { label: "GitHub", href: "https://github.com/umar-io" },
+  { label: "Docs", href: "https://approveet-app.vercel.app" },
   { label: "Privacy", href: "#" }
 ];
 
